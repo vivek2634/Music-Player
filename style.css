@@ -1,0 +1,284 @@
+/*Basic color variables*/
+:root{
+	--bg_color_1 : #070130;
+	--bg_color_2: #0d0065;
+	--bg_color_3: #222b5c;
+	--bg_music_bar: #3c3c3a;
+	--font_color_1: white;
+	--font_color_2: lightgrey;
+	--font_color_3 : #1DB954;
+}
+/*End of variables section*/
+
+/*Basic sections of the html page*/
+body{
+	height: 100%;
+	width: 100%;
+	margin-left: -5px;
+	margin-top: -1vh;
+	background-color: var(--bg_color_1);
+}
+
+nav{
+	height: 4rem;
+	width:100%;
+	margin: 0.3rem;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	position: fixed;
+	z-index: 1; /*Navigation bar should be always at top z-index ensures that*/
+	background-color: var(--bg_color_1);
+}main{
+	height: 150%;
+	width:65%;
+	margin-top: 10vh;
+	margin-left: 4%;
+	margin-right: 3%;
+	padding-bottom: 20vh;
+	display: inline-flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	flex-direction: column;
+}
+
+aside{
+	height:auto;
+	width:28%;
+	display: inline-flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	padding: 0px;
+	margin-top: 8%;
+	margin-left: -1vw;
+	vertical-align: top; /*Ensures that aside is displayed right beside main at the top*/
+}
+/*End of basic sections*/
+
+/* Basic Classes*/
+.hide{
+	display: none; /*This class hides any div that it is applie to*/
+}
+/*End of classes*/
+
+/*Navigation Bar Start*/
+/*Music Player Logo and Name part*/
+#music-player-tag{
+	width: auto;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+#search-bar-utility{
+	width: auto;
+	display: flex;
+	margin-right: 2rem;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+#music-player-logo{
+	display: inline;
+}
+#music-player-logo img{
+	height: 3.3rem;
+	width: 3.3rem;
+	border-radius: 50%;
+	display: inline;
+}
+#music-player-name{
+	color: white;
+	font-family: helvetica, sans-serif;
+	padding: 5px;
+	margin-top: 7px;
+	display: inline;
+}
+/*End of Music Player Logo and name part*/
+
+/* Favourates in navigation bar */
+#favs a{
+	color: white;
+    position:fixed;
+    font-weight:600;
+	font-family: helvetica, sans-serif;
+	padding: 5px;
+	top: 10px;
+	display:inline;
+    text-decoration: none;
+}
+
+/*Search bar*/
+#search-bar{
+	width: auto;
+	margin-top: 14px;
+	margin-right: 2rem;
+	color: white;
+	font-size: 1.1rem;
+}
+
+#search-bar input[type="text"]{
+	height:1.7rem;
+	width:17vw;
+	margin-right: 3px;
+	padding: 1px;
+	background-color: #0c0252;
+	border:none;
+	color:var(--font_color_1);
+	font-family: helvetica, sans-serif;
+}
+::placeholder{
+	color: var(--font_color_1);  /*Editing the placeholder of the searchbar*/
+	font-family: helvetica, sans-serif;
+	padding: 5px;
+}
+#search-bar input:focus{
+	height:1.7rem;
+	width:17vw;
+	outline:none;
+}
+#search-bar i{
+	margin-top: 1px;
+}
+/*End of search bar*/
+/*Miscellaneous part of navigation bar*/
+#notifications{
+	font-size: 1.3rem;
+	color: var(--font_color_1);
+	margin-top: 18px;
+	margin-right: 2rem;
+
+}
+#user{
+	margin-top: 5px;
+}
+#user img{
+	height: 3.3rem;
+	width: 3.3rem;
+	border-radius: 50%;
+}
+/*End of Miscellaneous portion of navigation bar*/
+/*End of Navigation Bar*/
+
+/* Main section start */
+/* Home Screen Carousel*/
+#song-type{
+	overflow: hidden;
+	white-space: nowrap;
+}
+#song-type img{
+	height:35vh;
+	width:35vh;
+	text-align: center;
+	margin-top: 50px;
+	padding: 4%;
+	transition: transform 0.7s ease-in-out;
+
+}
+#song-type img:hover{
+	transform: scale(1.1);
+	transition: transform 0.4s ease-in-out; /*Animation on hover*/
+}
+/* End of home screen carousel */
+
+#main-header h1{
+	color: var(--font_color_1);
+	font-family: helvetica, sans-serif;
+}
+
+/*Begining of latest release section*/
+#latest-release-items{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	position: relative;
+	margin-right: 5vw;
+}
+#latest-release h1{
+	font-family: helvetica, sans-serif;
+	color: var(--font_color_1);
+	font-weight: bold;
+	font-size: 1.2rem;
+	margin-left: -5px;
+	margin-top: 6vh;
+	margin-bottom: -14px;
+}
+#latest-release-item{
+	height:auto;
+	width:300px;
+	color: var(--font_color_1);
+	font-family: helvetica, sans-serif;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding-top: 2rem;
+}
+#latest-item-title{
+	padding-left: 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-left: 0vw;
+}
+#latest-release-img{
+	height: 100px;
+	width: 100px;
+	padding: 0px;
+	background-image: url(./images/latest-release-2.png);
+	background-position: center;
+	background-size: cover;
+	color: var(--font_color_1);
+	text-align: center;
+	font-size: 1.3rem;
+}
+#latest-release-img-button{
+	margin-top: 40%;
+}
+#latest-release-img-button a{
+	color: var(--font_color_1);
+}
+#latest-release-img:hover{
+	opacity: 0.8;
+}
+#latest-release-img:hover>.hide{
+	display: block;   /*Play button is displayed on hover*/
+}
+/*Dropdown bar of latest release section*/
+#dropdown{
+	height: 50px;
+	width: 50px;
+	position: absolute;
+	margin-left: 23vw;
+}
+#dropdown-menu{
+	height:0px;
+	width: 0px;
+	margin: 0px;
+	padding: 0px;
+	background-color: var(--font_color_1);
+	font-family: sans-serif;
+	color: #4b5c5e;
+    font-weight: 400;
+	position: relative;
+	z-index: 1;
+	padding: 1rem;
+	display: none;
+}
+#dropdown-list{
+    display: none;
+	margin-bottom: 1rem;
+}
+#dropdown-list a{
+	text-decoration: none;
+	color : #4b5c5e;
+}
+#dropdown:hover #dropdown-menu{
+	height:150px;
+    width: 200px;
+	display: block;
+}
+#dropdown:hover #dropdown-list{
+	display: block;
+}
+/*End of Dropdown bar of latest release section*/
+/*End of latest release section*/
